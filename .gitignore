@@ -1,0 +1,8 @@
+node_modules
+dist
+logs
+coverage-unit/*
+!coverage-unit/sprint*
+/npm-debug.log*
+/xunit.xml
+*.code-workspace

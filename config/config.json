@@ -1,0 +1,10 @@
+{
+    "operator": {
+        "session": "http://localhost:3000/operator/session"
+    },
+    "cTokenLedger": {
+        "local": "http://localhost:3008/ctoken-ledger/local"
+    },
+    "bookManageUrl": "http://localhost:3005/book-manage",
+    "timezone": "Asia/Tokyo"
+}

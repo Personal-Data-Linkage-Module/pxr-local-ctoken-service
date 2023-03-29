@@ -1,0 +1,84 @@
+{
+    "appenders": {
+        "ConsoleLogAppender": {
+            "type": "console"
+        },
+        "SystemLogAppender": {
+            "type": "dateFile",
+            "filename": "./logs/system.log",
+            "pattern": ".yyyy-MM-dd",
+            "daysToKeep": 30,
+            "alwaysIncludePattern": false,
+            "layout": {
+                "type": "pattern",
+                "pattern": "[%d{yyyy-MM-dd hh:mm:ss.SSS}] [%p] %m"
+            }
+        },
+        "HttpLogAppender": {
+            "type": "dateFile",
+            "filename": "./logs/http.log",
+            "pattern": ".yyyy-MM-dd",
+            "daysToKeep": 30,
+            "alwaysIncludePattern": false,
+            "layout": {
+                "type": "pattern",
+                "pattern": "[%d{yyyy-MM-dd hh:mm:ss.SSS}] [%p] [%x{sessionId}] [%x{requestId}] %m"
+            }
+        },
+        "AccessLogAppender": {
+            "type": "dateFile",
+            "filename": "./logs/access.log",
+            "pattern": ".yyyy-MM-dd",
+            "daysToKeep": 30,
+            "alwaysIncludePattern": false,
+            "layout": {
+                "type": "pattern",
+                "pattern": "[%d{yyyy-MM-dd hh:mm:ss.SSS}] [%p] [%x{sessionId}] [%x{requestId}] %m"
+            }
+        },
+        "ApplicationLogAppender": {
+            "type": "dateFile",
+            "filename": "./logs/application.log",
+            "pattern": ".yyyy-MM-dd",
+            "daysToKeep": 30,
+            "alwaysIncludePattern": false,
+            "layout": {
+                "type": "pattern",
+                "pattern": "[%d{yyyy-MM-dd hh:mm:ss.SSS}] [%p] [%x{sessionId}] [%x{requestId}] %m"
+            }
+        }
+    },
+    "replaceConsole": true,
+    "categories": {
+        "default": {
+            "appenders": [
+                "ConsoleLogAppender"
+            ],
+            "level": "all"
+        },
+        "system": {
+            "appenders": [
+                "SystemLogAppender"
+            ],
+            "level": "all"
+        },
+        "http": {
+            "appenders": [
+                "HttpLogAppender"
+            ],
+            "level": "all"
+        },
+        "access": {
+            "appenders": [
+                "AccessLogAppender"
+            ],
+            "level": "all"
+        },
+        "application": {
+            "appenders": [
+                "ApplicationLogAppender"
+            ],
+            "level": "all"
+        }
+    }
+}

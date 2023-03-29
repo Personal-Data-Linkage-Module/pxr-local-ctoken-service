@@ -1,0 +1,12 @@
+{
+    "name": "postgres",
+    "type": "postgres",
+    "host": "localhost",
+    "port": 5432,
+    "database": "pxr_pod",
+    "schema": "pxr_local_ctoken",
+    "username": "pxr_local_ctoken_user",
+    "password": "pxr_password",
+    "synchronize": false,
+    "logging": false
+}

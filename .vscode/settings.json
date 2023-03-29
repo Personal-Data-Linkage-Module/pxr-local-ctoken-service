@@ -1,0 +1,81 @@
+{
+    // Place your settings in this file to overwrite the default settings
+    "todohighlight.exclude": [
+        "**/.vscode/**",
+        "**/coverage/**",
+        "**/dist/**",
+        "**/img/**",
+        "**/logs/**",
+        "**/node_modules/**",
+        "**/openshift/**",
+        "**/pacts/**"
+    ],
+    "todohighlight.include": [
+        "**/*.ts",
+        "**/*.yml"
+    ],
+    "todohighlight.keywords": [
+        {
+            "text": "SDE-NOTE",
+            "color": "white",
+            "backgroundColor": "#0E7AC4",
+            "overviewRulerColor": "#0E7AC4",
+            "cursor": "pointer",
+            "border": "1px solid #eee",
+            "borderRadius": "2px",
+            "isWholeLine": true
+        },
+        {
+            "text": "SDE-MSA-PRIN",
+            "color": "white",
+            "backgroundColor": "#58BE89",
+            "overviewRulerColor": "#58BE89",
+            "cursor": "pointer",
+            "border": "1px solid #eee",
+            "borderRadius": "2px",
+            "isWholeLine": true
+        },
+        {
+            "text": "SDE-IMPL-REQUIRED-DONE",
+            "color": "white",
+            "backgroundColor": "#A6341F",
+            "overviewRulerColor": "#A6341F",
+            "cursor": "pointer",
+            "border": "1px solid #eee",
+            "borderRadius": "2px",
+            "isWholeLine": true
+        },
+        {
+            "text": "SDE-IMPL-RECOMMENDED-DONE",
+            "color": "white",
+            "backgroundColor": "#C69D2B",
+            "overviewRulerColor": "#C69D2B",
+            "cursor": "pointer",
+            "border": "1px solid #eee",
+            "borderRadius": "2px",
+            "isWholeLine": true
+        },
+        {
+            "text": "SDE-IMPL-REQUIRED",
+            "color": "white",
+            "backgroundColor": "#EE6557",
+            "overviewRulerColor": "#EE6557",
+            "cursor": "pointer",
+            "border": "1px solid #eee",
+            "borderRadius": "2px",
+            "isWholeLine": true
+        },
+        {
+            "text": "SDE-IMPL-RECOMMENDED",
+            "color": "white",
+            "backgroundColor": "#FBA848",
+            "overviewRulerColor": "#FBA848",
+            "cursor": "pointer",
+            "border": "1px solid #eee",
+            "borderRadius": "2px",
+            "isWholeLine": true
+        }
+    ],
+    "files.eol": "\n",
+    "files.encoding": "utf8"
+}

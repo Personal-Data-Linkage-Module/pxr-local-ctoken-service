@@ -1,0 +1,15 @@
+# Copyright 2022 NEC Corporation
+# Released under the MIT license.
+# https://opensource.org/licenses/mit-license.php
+#
+# SDE-IMPL-RECOMMENDED REST API サーバーのポート番号を指定します
+ports:
+    http: 3009
+
+# SDE-IMPL-RECOMMENDED ログレベルを次のいずれかを設定します[none/debug/info]
+loglevel: info
+
+# SDE-MSA-PRIN 過負荷を回避する （MSA-PRIN-ID-02）
+# SDE-IMPL-RECOMMENDED Backpressureの設定をします
+backPressure:
+    threshold: 100  # 同時実行数しきい値
