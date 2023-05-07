@@ -2,12 +2,13 @@
 # Released under the MIT license.
 # https://opensource.org/licenses/mit-license.php
 #
-FROM node:12
+FROM node:12-bullseye
 
 WORKDIR /usr/src/app
 
 # Install node modules
 COPY package*.json ./
+RUN apt-get update && apt-get upgrade -y
 RUN npm install
 
 # Build production
