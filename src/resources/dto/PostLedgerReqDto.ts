@@ -23,7 +23,7 @@ export default class PostLedgerReqDto {
     @Transform(transformToNumber)
     @IsNumber()
     @Min(0)
-    offset: number;
+        offset: number;
 
     /**
      * 対象件数
@@ -34,5 +34,5 @@ export default class PostLedgerReqDto {
     @IsNumber()
     @Min(1)
     @Max(1000)
-    count: number;
+        count: number;
 }

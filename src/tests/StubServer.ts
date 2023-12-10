@@ -73,6 +73,7 @@ export class BookManageServer {
                 res.status(200).json({ result: 'success' });
                 return;
             } else if (status === 0) {
+                // eslint-disable-line no-empty
             }
             res.status(status).end();
         };

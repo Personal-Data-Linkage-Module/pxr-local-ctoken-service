@@ -40,5 +40,5 @@ export class CloudConfig {
                 reject(err);
             });
         });
-    }
+    };
 }

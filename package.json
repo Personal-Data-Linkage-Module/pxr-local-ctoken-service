@@ -13,6 +13,7 @@
     "build:ts": "node ./node_modules/typescript/bin/tsc",
     "lint": "eslint ./src/index.ts src/**/*.ts",
     "lint-init": "eslint --init",
+    "lint-fix": "eslint --fix ./src/**/*.ts",
     "test:unit": "jest --coverage --forceExit --detectOpenHandles --runInBand --config=jest.unit.config.js",
     "test-jenkins:unit": "jest --coverage --reporters=jest-junit --forceExit --detectOpenHandles --runInBand --config=jest.unit.config.js",
     "jest-clear": "jest --clearCache"

@@ -25,55 +25,55 @@ export default class DocumentEntity extends BaseEntity {
 
     /** rowHashId */
     @Column({ type: 'bigint', nullable: false, name: 'row_hash_id' })
-    rowHashId: number;
+        rowHashId: number;
 
     /** ドキュメント識別子 */
     @Column({ type: 'varchar', length: 255, nullable: false, name: '_1_1' })
-    docIdentifier: string;
+        docIdentifier: string;
 
     /** ドキュメント種別カタログコード */
     @Column({ type: 'bigint', name: '_1_2_1' })
-    docCatalogCode: number;
+        docCatalogCode: number;
 
     /** ドキュメント種別カタログバージョン */
     @Column({ type: 'bigint', name: '_1_2_2' })
-    docCatalogVersion: number;
+        docCatalogVersion: number;
 
     /** ドキュメント作成時間 */
     @Column({ type: 'timestamp without time zone', name: '_2_1' })
-    docCreateAt: Date;
+        docCreateAt: Date;
 
     /** ドキュメントを発生させたアクター識別子カタログコード */
     @Column({ type: 'bigint', name: '_3_1_1' })
-    docActorCode: number;
+        docActorCode: number;
 
     /** ドキュメントを発生させたアクター識別子カタログバージョン */
     @Column({ type: 'bigint', name: '_3_1_2' })
-    docActorVersion: number;
+        docActorVersion: number;
 
     /** ワークフロー識別子カタログコード */
     @Column({ type: 'bigint', name: '_3_2_1' })
-    docWfCatalogCode: number;
+        docWfCatalogCode: number;
 
     /** ワークフロー識別子カタログバージョン */
     @Column({ type: 'bigint', name: '_3_2_2' })
-    docWfCatalogVersion: number;
+        docWfCatalogVersion: number;
 
     /** アプリケーション識別子カタログコード */
     @Column({ type: 'bigint', name: '_3_5_1' })
-    docAppCatalogCode: number;
+        docAppCatalogCode: number;
 
     /** アプリケーション識別子カタログバージョン */
     @Column({ type: 'bigint', name: '_3_5_2' })
-    docAppCatalogVersion: number;
+        docAppCatalogVersion: number;
 
     /** 削除フラグ */
     @Column({ type: 'boolean', nullable: false, default: false, name: 'is_disabled' })
-    isDisabled: boolean = false;
+        isDisabled: boolean = false;
 
     /** 登録者 */
     @Column({ type: 'varchar', length: 255, nullable: false, name: 'created_by' })
-    createdBy: string = '';
+        createdBy: string = '';
 
     /** 登録日時 */
     @CreateDateColumn({ type: 'timestamp without time zone', name: 'created_at' })
@@ -81,7 +81,7 @@ export default class DocumentEntity extends BaseEntity {
 
     /** 更新者 */
     @Column({ type: 'varchar', length: 255, nullable: false, name: 'updated_by' })
-    updatedBy: string = '';
+        updatedBy: string = '';
 
     /** 更新日時 */
     @UpdateDateColumn({ type: 'timestamp without time zone', name: 'updated_at', onUpdate: 'now()' })
@@ -90,5 +90,5 @@ export default class DocumentEntity extends BaseEntity {
     /** CTokenテーブルのレコード */
     @ManyToOne(type => RowHashEntity, rowHash => rowHash.documents)
     @JoinColumn({ name: 'row_hash_id', referencedColumnName: 'id' })
-    rowHash: RowHashEntity;
+        rowHash: RowHashEntity;
 }
