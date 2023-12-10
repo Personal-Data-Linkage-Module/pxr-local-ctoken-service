@@ -42,6 +42,7 @@ describe('Local-CToken Service', () => {
         delete from pxr_local_ctoken.document;
         delete from pxr_local_ctoken.row_hash;
         `);
+        await connection.destroy();
     });
     afterAll(async () => {
         // スタブサーバ停止
