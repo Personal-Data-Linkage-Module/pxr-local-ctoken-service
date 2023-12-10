@@ -34,7 +34,7 @@ export class CloudConfig {
                 name: this.configName
             }).then((config: any) => {
                 this.configData = config;
-                resolve();
+                resolve(null);
             }).catch((err: any) => {
                 systemLogger.error(getBuildInfo(), err);
                 reject(err);
