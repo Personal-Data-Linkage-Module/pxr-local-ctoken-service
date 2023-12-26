@@ -5,6 +5,7 @@ https://opensource.org/licenses/mit-license.php
 /* eslint-disable */
 import AppError from '../common/AppError';
 import express = require('express');
+import { RequestHandler } from 'express';
 import { Server } from 'net';
 /* eslint-enable */
 
@@ -13,8 +14,8 @@ export class CtolenLedgerServer {
     server: Server;
     constructor (status: number) {
         this.app = express();
-        this.app.use(express.json({ limit: '100mb' }));
-        this.app.use(express.urlencoded({ extended: false }));
+        this.app.use(express.json({ limit: '100mb' }) as RequestHandler);
+        this.app.use(express.urlencoded({ extended: false }) as RequestHandler);
         this.app.post('/ctoken-ledger/local', (req: express.Request, res: express.Response) => {
             res.status(status).end();
         });
@@ -27,8 +28,8 @@ export class OperatorServer {
     server: Server;
     constructor (status: number, type: number) {
         this.app = express();
-        this.app.use(express.json({ limit: '100mb' }));
-        this.app.use(express.urlencoded({ extended: false }));
+        this.app.use(express.json({ limit: '100mb' }) as RequestHandler);
+        this.app.use(express.urlencoded({ extended: false }) as RequestHandler);
         this.app.post('/operator/session', (req: express.Request, res: express.Response) => {
             if (status === 200) {
                 res.status(200)
@@ -72,6 +73,7 @@ export class BookManageServer {
                 res.status(200).json({ result: 'success' });
                 return;
             } else if (status === 0) {
+                // eslint-disable-line no-empty
             }
             res.status(status).end();
         };

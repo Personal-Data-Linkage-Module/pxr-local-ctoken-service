@@ -12,6 +12,7 @@ export async function clear () {
         SELECT SETVAL('pxr_local_ctoken.document_id_seq', 1, false);
         SELECT SETVAL('pxr_local_ctoken.row_hash_id_seq', 1, false);
     `);
+    await connection.destroy();
 }
 
 export async function insert () {
@@ -217,4 +218,5 @@ export async function insert () {
             '2020-02-18 22:15:08.06'
         );
     `);
+    await connection.destroy();
 }

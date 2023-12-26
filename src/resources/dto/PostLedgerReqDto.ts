@@ -14,13 +14,14 @@ import { Transform } from 'class-transformer';
 import { transformToNumber } from '../../common/Transform';
 /* eslint-enable */
 
+/* eslint-disable indent */
 export default class PostLedgerReqDto {
     /**
      * 開始位置
      */
     @IsDefined()
     @IsNotEmpty()
-    @Transform(transformToNumber)
+    @Transform(({ value }) => { return transformToNumber(value); })
     @IsNumber()
     @Min(0)
     offset: number;
@@ -30,9 +31,10 @@ export default class PostLedgerReqDto {
      */
     @IsDefined()
     @IsNotEmpty()
-    @Transform(transformToNumber)
+    @Transform(({ value }) => { return transformToNumber(value); })
     @IsNumber()
     @Min(1)
     @Max(1000)
     count: number;
 }
+/* eslint-enable indent */
